@@ -1,0 +1,198 @@
+/* Player Profile / Dossier */
+.card--bio {
+  border-width: 3px;
+}
+
+.bio__head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px dashed var(--outline-variant);
+}
+
+.bio__square {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: var(--arcade-green);
+  border: var(--border-1);
+}
+
+.bio__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.bio__text {
+  margin-bottom: 1rem;
+  line-height: 1.625;
+  color: var(--on-surface);
+}
+
+.bio__text:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.readout {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem;
+  background: var(--terminal);
+  color: var(--canvas-paper);
+  border: var(--border-2);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+}
+
+.readout__line--command { color: var(--arcade-gold); font-weight: 700; }
+.readout__line--ok { color: var(--tertiary-fixed); }
+.readout__line--focus { color: var(--secondary-fixed); }
+
+/* Stat sheet */
+.card--stats {
+  background: var(--surface-low);
+}
+
+.stat-list {
+  display: grid;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--canvas-paper);
+  border: var(--border-2);
+  box-shadow: var(--shadow-3);
+}
+
+.stat-row dt {
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+}
+
+.stat-row dd {
+  color: var(--ink);
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.stat-row dd.is-red { color: var(--arcade-red); }
+.stat-row dd.is-green { color: var(--arcade-green); }
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.125rem 0.5rem;
+  background: var(--arcade-green);
+  color: var(--on-primary);
+  border: var(--border-1);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+.status-pill__dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 9999px;
+  background: var(--canvas-paper);
+}
+
+/* Stage select (page-to-page navigation cards) */
+.stage-select__grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.stage-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1.25rem;
+  border: var(--border-4);
+  box-shadow: var(--shadow-6);
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+}
+
+.stage-card:hover {
+  transform: translate(-2px, -4px);
+  box-shadow: 8px 10px 0 var(--ink);
+}
+
+.stage-card:active {
+  transform: translate(4px, 4px);
+  box-shadow: var(--shadow-2);
+}
+
+.stage-card--gold { background: rgba(246, 190, 57, 0.9); color: var(--ink); }
+.stage-card--green { background: var(--arcade-green); color: var(--canvas-paper); }
+.stage-card--red { background: var(--arcade-red); color: var(--on-primary); }
+
+.stage-card__level {
+  align-self: flex-start;
+  padding: 0.125rem 0.5rem;
+  background: var(--ink);
+  color: var(--canvas-paper);
+  border: 1px solid var(--canvas-paper);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.stage-card__title {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stage-card__desc {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.stage-card__go {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .card--bio {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section .stage-select__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

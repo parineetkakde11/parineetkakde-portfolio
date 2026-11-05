@@ -1,0 +1,63 @@
+/* Design tokens extracted from code.html (Tailwind config). */
+:root {
+  /* Arcade palette */
+  --arcade-red: #e52521;
+  --arcade-cyan: #0284c7;
+  --arcade-green: #006d32;
+  --arcade-gold: #d4a017;
+  --arcade-indigo: #4f46e5;
+  --ink: #141416;
+  --canvas-cream: #fbf7ee;
+  --canvas-paper: #fffdf5;
+  --terminal: #1f2023;
+
+  /* Supporting Material-style tokens used by the original design */
+  --primary: #be000c;
+  --on-primary: #ffffff;
+  --secondary: #795900;
+  --secondary-container: #ffc641;
+  --secondary-fixed: #ffdfa0;
+  --secondary-fixed-dim: #f6be39;
+  --tertiary-fixed: #9bf7ac;
+  --on-tertiary-container: #fefffa;
+  --surface-lowest: #ffffff;
+  --surface-low: #f7f3ea;
+  --surface: #f1eee5;
+  --surface-highest: #e6e2d9;
+  --on-surface: #1c1c17;
+  --on-surface-variant: #5d3f3b;
+  --outline: #926f6a;
+  --outline-variant: #e7bdb7;
+  --error-container: #ffdad6;
+
+  /* Typography */
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Borders & hard offset shadows */
+  --border-1: 1px solid var(--ink);
+  --border-2: 2px solid var(--ink);
+  --border-3: 3px solid var(--ink);
+  --border-4: 4px solid var(--ink);
+  --shadow-2: 2px 2px 0 var(--ink);
+  --shadow-3: 3px 3px 0 var(--ink);
+  --shadow-4: 4px 4px 0 var(--ink);
+  --shadow-5: 5px 5px 0 var(--ink);
+  --shadow-6: 6px 6px 0 var(--ink);
+  --shadow-8: 8px 8px 0 var(--ink);
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --gutter: 1.5rem;
+  --margin: 2.5rem;
+
+  /* Layout */
+  --header-h: 80px;
+  --container: 80rem;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast: 150ms var(--ease);
+}

@@ -1,0 +1,115 @@
+/*
+ * Cross-cutting small-screen adjustments. Component files are mobile-first;
+ * this file only scales down typography / spacing that the original design
+ * did not adapt for narrow phones (headline-lg-mobile tokens etc.).
+ */
+
+@media (max-width: 767px) {
+  .t-headline-lg,
+  .boss-card__title {
+    font-size: 1.75rem; /* headline-lg-mobile */
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .boss-banner__main {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .section {
+    padding-block: 3rem;
+  }
+
+  .section--tight {
+    padding-top: 0;
+  }
+
+  .t-headline-md,
+  .status-callout__title {
+    font-size: 1.5rem;
+  }
+
+  .hero__lead {
+    font-size: 1rem;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .boss-card__header {
+    padding: 1rem;
+  }
+
+  .boss-card__body {
+    padding: 1.25rem 1rem;
+  }
+
+  .crt__feed {
+    display: none;
+  }
+
+  .contact-card__tag {
+    white-space: normal;
+    width: max-content;
+  }
+
+  .dispatch {
+    padding: 1.25rem 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --gutter: 1rem;
+  }
+
+  .brand {
+    gap: 0.625rem;
+  }
+
+  .brand__logo {
+    height: 2.25rem;
+  }
+
+  .brand__name {
+    font-size: 1rem;
+  }
+
+  .stage-tag {
+    padding: 0.375rem 0.625rem;
+    font-size: 0.6875rem;
+    letter-spacing: 0.05em;
+  }
+
+  .t-headline-lg,
+  .boss-card__title {
+    font-size: 1.5rem;
+  }
+
+  .marquee {
+    padding: 1.25rem 1rem;
+  }
+
+  .card {
+    padding: 1.25rem 1rem;
+  }
+
+  .tier {
+    padding: 0.375rem 0.25rem;
+  }
+
+  .tier__label {
+    font-size: 0.8125rem;
+  }
+
+  .waveform__label {
+    display: none;
+  }
+
+  .quest-card {
+    padding: 1.25rem 1rem;
+  }
+}
